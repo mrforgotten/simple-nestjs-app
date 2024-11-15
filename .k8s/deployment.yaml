@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-nestjs
+spec:
+  selector:
+    matchLabels:
+      app: simple-nestjs
+  template:
+    metadata:
+      labels:
+        app: simple-nestjs
+    spec:
+      containers:
+      - name: simple-nestjs
+        image: local-simple-nestjs:latest-stab
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
