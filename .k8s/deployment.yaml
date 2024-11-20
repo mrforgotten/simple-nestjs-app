@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: simple-nestjs
-        image: local-simple-nestjs:latest-stab
+        image: local-simple-nestjs:latest-stab-1
         resources:
           limits:
             memory: "128Mi"
