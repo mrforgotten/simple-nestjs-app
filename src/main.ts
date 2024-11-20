@@ -8,7 +8,7 @@ async function bootstrap() {
   const APP_PORT = configService.get<number>('APP_PORT') || 3000;
   const NODE_ENV = configService.get('NODE_ENV') || 'local';
   await app.listen(APP_PORT, () => {
-    console.log('===', NODE_ENV, ' APPLICATION IS RUNNING ON PORT:', APP_PORT, '===');
+    console.log('===', NODE_ENV, 'test APPLICATION IS RUNNING ON PORT:', APP_PORT, '===');
   });
 }
 bootstrap();
